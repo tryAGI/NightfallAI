@@ -90,6 +90,8 @@ namespace NightfallAI
         /// <summary>
         /// Initializes a new instance of the <see cref="Detector" /> class.
         /// </summary>
+        /// <param name="minConfidence"></param>
+        /// <param name="detectorType"></param>
         /// <param name="detectorUUID">
         /// UUID of a pre-configured detector
         /// </param>
@@ -97,11 +99,9 @@ namespace NightfallAI
         /// Minimum number of findings required<br/>
         /// Default Value: 0
         /// </param>
-        /// <param name="minConfidence"></param>
         /// <param name="displayName">
         /// Display name for the detector
         /// </param>
-        /// <param name="detectorType"></param>
         /// <param name="nightfallDetector">
         /// Name of a built-in Nightfall detector (e.g., CREDIT_CARD_NUMBER,<br/>
         /// US_SOCIAL_SECURITY_NUMBER, API_KEY, EMAIL_ADDRESS, PHONE_NUMBER,<br/>
@@ -134,11 +134,11 @@ namespace NightfallAI
             global::System.Collections.Generic.IList<global::NightfallAI.ExclusionRule>? exclusionRules,
             global::NightfallAI.RedactionConfig? redactionConfig)
         {
-            this.MinConfidence = minConfidence;
-            this.DetectorType = detectorType;
             this.DetectorUUID = detectorUUID;
             this.MinNumFindings = minNumFindings;
+            this.MinConfidence = minConfidence;
             this.DisplayName = displayName;
+            this.DetectorType = detectorType;
             this.NightfallDetector = nightfallDetector;
             this.Regex = regex;
             this.WordList = wordList;
