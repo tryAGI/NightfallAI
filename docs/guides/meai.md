@@ -1,6 +1,9 @@
 # Microsoft.Extensions.AI Integration
 
-NightfallAI provides `AIFunction` tool wrappers compatible with any `Microsoft.Extensions.AI.IChatClient`. These tools enable AI agents to scan text and files for sensitive data.
+!!! tip "Cross-SDK comparison"
+    See the [centralized MEAI documentation](https://tryagi.github.io/docs/meai/) for feature matrices and comparisons across all tryAGI SDKs.
+
+The NightfallAI SDK provides `AIFunction` tool wrappers compatible with [Microsoft.Extensions.AI](https://learn.microsoft.com/en-us/dotnet/ai/microsoft-extensions-ai). These tools can be used with any `IChatClient` to give AI models the ability to scan text and files for PII, PHI, PCI, secrets, and credentials.
 
 ## Available Tools
 
