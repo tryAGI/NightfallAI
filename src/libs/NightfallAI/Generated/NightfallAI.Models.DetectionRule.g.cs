@@ -38,14 +38,14 @@ namespace NightfallAI
         /// <summary>
         /// Initializes a new instance of the <see cref="DetectionRule" /> class.
         /// </summary>
-        /// <param name="name">
-        /// Human-readable name for this detection rule
-        /// </param>
         /// <param name="detectors">
         /// List of detectors to apply
         /// </param>
         /// <param name="logicalOp">
         /// ANY = logical OR, ALL = logical AND
+        /// </param>
+        /// <param name="name">
+        /// Human-readable name for this detection rule
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -55,9 +55,9 @@ namespace NightfallAI
             global::NightfallAI.LogicalOp logicalOp,
             string? name)
         {
+            this.Name = name;
             this.Detectors = detectors ?? throw new global::System.ArgumentNullException(nameof(detectors));
             this.LogicalOp = logicalOp;
-            this.Name = name;
         }
 
         /// <summary>
