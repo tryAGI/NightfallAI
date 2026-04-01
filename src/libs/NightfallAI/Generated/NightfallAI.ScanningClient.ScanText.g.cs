@@ -357,6 +357,7 @@ namespace NightfallAI
             global::System.Collections.Generic.IList<string>? policyUUIDs = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::NightfallAI.ScanTextRequest
             {
                 Payload = payload,
