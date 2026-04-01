@@ -307,7 +307,6 @@ namespace NightfallAI
             long fileSizeBytes,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::NightfallAI.InitFileUploadRequest
             {
                 FileSizeBytes = fileSizeBytes,
