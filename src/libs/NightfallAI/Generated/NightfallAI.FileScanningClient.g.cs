@@ -4,7 +4,7 @@
 namespace NightfallAI
 {
     /// <summary>
-    /// Upload and scan files for sensitive data<br/>
+    /// Upload and scan files for sensitive data.<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
@@ -13,7 +13,7 @@ namespace NightfallAI
         /// <summary>
         /// Nightfall AI Production API
         /// </summary>
-        public const string DefaultBaseUrl = "https://api.nightfall.ai";
+        public const string DefaultBaseUrl = "https://api.nightfall.ai/";
 
         private bool _disposeHttpClient = true;
 
