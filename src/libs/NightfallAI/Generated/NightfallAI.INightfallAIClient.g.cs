@@ -42,12 +42,12 @@ namespace NightfallAI
 
 
         /// <summary>
-        /// Upload and scan files for sensitive data
+        /// Upload and scan files for sensitive data.
         /// </summary>
         public FileScanningClient FileScanning { get; }
 
         /// <summary>
-        /// Scan text for sensitive data (PII, PHI, PCI, secrets, credentials)
+        /// Scan text for sensitive data (PII, PHI, PCI, secrets, credentials).
         /// </summary>
         public ScanningClient Scanning { get; }
 

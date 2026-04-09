@@ -6,6 +6,7 @@ namespace NightfallAI
     public sealed partial class NightfallAIClient
     {
         /// <inheritdoc cref="NightfallAIClient(global::System.Net.Http.HttpClient?, global::System.Uri?, global::System.Collections.Generic.List{global::NightfallAI.EndPointAuthorization}?, bool)"/>
+
         public NightfallAIClient(
             string apiKey,
             global::System.Net.Http.HttpClient? httpClient = null,

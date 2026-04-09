@@ -5,6 +5,25 @@ namespace NightfallAI
 {
     public partial class FileScanningClient
     {
+
+
+        private static readonly global::NightfallAI.EndPointSecurityRequirement s_ScanUploadedFileSecurityRequirement0 =
+            new global::NightfallAI.EndPointSecurityRequirement
+            {
+                Authorizations = new global::NightfallAI.EndPointAuthorizationRequirement[]
+                {                    new global::NightfallAI.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::NightfallAI.EndPointSecurityRequirement[] s_ScanUploadedFileSecurityRequirements =
+            new global::NightfallAI.EndPointSecurityRequirement[]
+            {                s_ScanUploadedFileSecurityRequirement0,
+            };
         partial void PrepareScanUploadedFileArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref global::System.Guid fileId,
@@ -47,9 +66,15 @@ namespace NightfallAI
                 fileId: ref fileId,
                 request: request);
 
+
+            var __authorizations = global::NightfallAI.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ScanUploadedFileSecurityRequirements,
+                operationName: "ScanUploadedFileAsync");
+
             var __pathBuilder = new global::NightfallAI.PathBuilder(
                 path: $"/v3/upload/{fileId}/scan",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -59,7 +84,7 @@ namespace NightfallAI
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
