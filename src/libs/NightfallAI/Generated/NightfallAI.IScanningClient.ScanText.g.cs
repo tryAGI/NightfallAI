@@ -11,11 +11,13 @@ namespace NightfallAI
         /// Maximum 500KB total payload size. Maximum 50,000 items in the payload array.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::NightfallAI.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::NightfallAI.ScanTextResponse> ScanTextAsync(
 
             global::NightfallAI.ScanTextRequest request,
+            global::NightfallAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Scan text for sensitive data<br/>
@@ -32,12 +34,14 @@ namespace NightfallAI
         /// <param name="policyUUIDs">
         /// UUIDs of pre-configured policies from the Nightfall Dashboard
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::NightfallAI.ScanTextResponse> ScanTextAsync(
             global::System.Collections.Generic.IList<string> payload,
             global::NightfallAI.ScanPolicy? policy = default,
             global::System.Collections.Generic.IList<string>? policyUUIDs = default,
+            global::NightfallAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
