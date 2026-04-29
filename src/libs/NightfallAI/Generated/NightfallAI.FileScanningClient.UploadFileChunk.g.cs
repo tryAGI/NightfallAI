@@ -141,8 +141,8 @@ namespace NightfallAI
                 PrepareUploadFileChunkRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    fileId: fileId,
-                    xUploadOffset: xUploadOffset,
+                    fileId: fileId!,
+                    xUploadOffset: xUploadOffset!,
                     request: request);
 
                 return __httpRequest;

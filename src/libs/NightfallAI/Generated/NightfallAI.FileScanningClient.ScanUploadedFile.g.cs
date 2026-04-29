@@ -140,7 +140,7 @@ namespace NightfallAI
                 PrepareScanUploadedFileRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    fileId: fileId,
+                    fileId: fileId!,
                     request: request);
 
                 return __httpRequest;
