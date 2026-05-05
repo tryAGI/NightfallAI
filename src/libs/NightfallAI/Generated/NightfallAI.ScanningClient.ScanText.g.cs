@@ -57,6 +57,31 @@ namespace NightfallAI
             global::NightfallAI.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await ScanTextAsResponseAsync(
+
+                request: request,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Scan text for sensitive data<br/>
+        /// Scans the provided plaintext payloads against the provided detectors and returns all findings.<br/>
+        /// Each index in the findings array corresponds one-to-one with the input request payload.<br/>
+        /// Maximum 500KB total payload size. Maximum 50,000 items in the payload array.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::NightfallAI.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::NightfallAI.AutoSDKHttpResponse<global::NightfallAI.ScanTextResponse>> ScanTextAsResponseAsync(
+
+            global::NightfallAI.ScanTextRequest request,
+            global::NightfallAI.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
@@ -87,6 +112,7 @@ namespace NightfallAI
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::NightfallAI.PathBuilder(
                                 path: "/v3/scan",
                                 baseUri: HttpClient.BaseAddress);
@@ -166,6 +192,8 @@ namespace NightfallAI
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -176,6 +204,11 @@ namespace NightfallAI
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::NightfallAI.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::NightfallAI.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -193,6 +226,8 @@ namespace NightfallAI
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -202,8 +237,7 @@ namespace NightfallAI
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::NightfallAI.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -212,6 +246,11 @@ namespace NightfallAI
                         __attempt < __maxAttempts &&
                         global::NightfallAI.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::NightfallAI.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::NightfallAI.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::NightfallAI.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -228,14 +267,15 @@ namespace NightfallAI
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::NightfallAI.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -275,6 +315,8 @@ namespace NightfallAI
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -295,6 +337,8 @@ namespace NightfallAI
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                             // Bad request
@@ -471,9 +515,13 @@ namespace NightfallAI
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::NightfallAI.ScanTextResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::NightfallAI.ScanTextResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::NightfallAI.AutoSDKHttpResponse<global::NightfallAI.ScanTextResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::NightfallAI.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -501,9 +549,13 @@ namespace NightfallAI
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return
-                                        await global::NightfallAI.ScanTextResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::NightfallAI.ScanTextResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::NightfallAI.AutoSDKHttpResponse<global::NightfallAI.ScanTextResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::NightfallAI.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
