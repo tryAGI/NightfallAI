@@ -41,5 +41,6 @@ namespace NightfallAI
         public ConfidenceAdjustment()
         {
         }
+
     }
 }

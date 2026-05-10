@@ -57,5 +57,6 @@ namespace NightfallAI
         public AlertConfig()
         {
         }
+
     }
 }
