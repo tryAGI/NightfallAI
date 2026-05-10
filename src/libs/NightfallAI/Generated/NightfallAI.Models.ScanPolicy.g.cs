@@ -85,5 +85,6 @@ namespace NightfallAI
         public ScanPolicy()
         {
         }
+
     }
 }

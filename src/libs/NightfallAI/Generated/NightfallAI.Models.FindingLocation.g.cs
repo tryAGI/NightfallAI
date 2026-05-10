@@ -84,5 +84,6 @@ namespace NightfallAI
         public FindingLocation()
         {
         }
+
     }
 }

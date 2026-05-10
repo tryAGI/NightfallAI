@@ -39,5 +39,6 @@ namespace NightfallAI
         public EmailAlert()
         {
         }
+
     }
 }

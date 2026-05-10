@@ -132,5 +132,6 @@ namespace NightfallAI
         public Finding()
         {
         }
+
     }
 }

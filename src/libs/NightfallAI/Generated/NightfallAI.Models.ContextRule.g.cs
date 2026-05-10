@@ -60,5 +60,6 @@ namespace NightfallAI
         public ContextRule()
         {
         }
+
     }
 }

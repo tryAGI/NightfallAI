@@ -79,5 +79,6 @@ namespace NightfallAI
         public RedactionConfig()
         {
         }
+
     }
 }

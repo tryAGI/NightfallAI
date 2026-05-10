@@ -51,5 +51,6 @@ namespace NightfallAI
         public WordList()
         {
         }
+
     }
 }

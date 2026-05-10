@@ -48,5 +48,6 @@ namespace NightfallAI
         public ScanFileResponse()
         {
         }
+
     }
 }

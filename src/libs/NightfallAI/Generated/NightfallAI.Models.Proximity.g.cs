@@ -52,5 +52,6 @@ namespace NightfallAI
         public Proximity()
         {
         }
+
     }
 }
