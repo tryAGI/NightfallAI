@@ -153,5 +153,6 @@ namespace NightfallAI
         public Detector()
         {
         }
+
     }
 }

@@ -70,5 +70,6 @@ namespace NightfallAI
         public ExclusionRule()
         {
         }
+
     }
 }

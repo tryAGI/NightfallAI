@@ -25,6 +25,21 @@ namespace NightfallAI
         /// Each index in the findings array corresponds one-to-one with the input request payload.<br/>
         /// Maximum 500KB total payload size. Maximum 50,000 items in the payload array.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::NightfallAI.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::NightfallAI.AutoSDKHttpResponse<global::NightfallAI.ScanTextResponse>> ScanTextAsResponseAsync(
+
+            global::NightfallAI.ScanTextRequest request,
+            global::NightfallAI.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Scan text for sensitive data<br/>
+        /// Scans the provided plaintext payloads against the provided detectors and returns all findings.<br/>
+        /// Each index in the findings array corresponds one-to-one with the input request payload.<br/>
+        /// Maximum 500KB total payload size. Maximum 50,000 items in the payload array.
+        /// </summary>
         /// <param name="payload">
         /// List of text strings to scan. Maximum 50,000 items, 500KB total.
         /// </param>

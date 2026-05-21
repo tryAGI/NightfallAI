@@ -66,5 +66,6 @@ namespace NightfallAI
         public FileScanPolicy()
         {
         }
+
     }
 }

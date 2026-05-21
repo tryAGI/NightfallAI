@@ -40,5 +40,6 @@ namespace NightfallAI
         public InitFileUploadRequest()
         {
         }
+
     }
 }

@@ -72,5 +72,6 @@ namespace NightfallAI
         public MaskConfig()
         {
         }
+
     }
 }
