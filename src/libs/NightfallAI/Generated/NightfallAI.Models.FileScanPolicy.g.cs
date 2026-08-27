@@ -6,31 +6,31 @@
 namespace NightfallAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class FileScanPolicy
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("webhookURL")]
         [global::System.Obsolete("This property marked as deprecated.")]
         public string? WebhookURL { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("detectionRules")]
         public global::System.Collections.Generic.IList<global::NightfallAI.DetectionRule>? DetectionRules { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("detectionRuleUUIDs")]
         public global::System.Collections.Generic.IList<string>? DetectionRuleUUIDs { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("alertConfig")]
         public global::NightfallAI.AlertConfig? AlertConfig { get; set; }

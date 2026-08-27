@@ -9,7 +9,7 @@ namespace NightfallAI
     public sealed partial class RedactionConfig
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("maskConfig")]
         public global::NightfallAI.MaskConfig? MaskConfig { get; set; }
@@ -21,13 +21,13 @@ namespace NightfallAI
         public global::NightfallAI.InfoTypeSubstitutionConfig? InfoTypeSubstitutionConfig { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("substitutionConfig")]
         public global::NightfallAI.SubstitutionConfig? SubstitutionConfig { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cryptoConfig")]
         public global::NightfallAI.CryptoConfig? CryptoConfig { get; set; }

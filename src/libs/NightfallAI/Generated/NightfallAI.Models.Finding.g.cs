@@ -4,7 +4,7 @@
 namespace NightfallAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class Finding
     {
@@ -15,62 +15,62 @@ namespace NightfallAI
         public string? Finding1 { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("redactedFinding")]
         public string? RedactedFinding { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("beforeContext")]
         public string? BeforeContext { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("afterContext")]
         public string? AfterContext { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("detector")]
         public global::NightfallAI.DetectorMetadata? Detector { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("confidence")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::NightfallAI.JsonConverters.ConfidenceJsonConverter))]
         public global::NightfallAI.Confidence? Confidence { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("location")]
         public global::NightfallAI.FindingLocation? Location { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("redactedLocation")]
         public global::NightfallAI.FindingLocation? RedactedLocation { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("matchedDetectionRuleUUIDs")]
         public global::System.Collections.Generic.IList<string>? MatchedDetectionRuleUUIDs { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("matchedDetectionRules")]
         public global::System.Collections.Generic.IList<string>? MatchedDetectionRules { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("findingMetadata")]
         public global::NightfallAI.FindingMetadata? FindingMetadata { get; set; }

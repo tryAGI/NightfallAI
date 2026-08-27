@@ -4,28 +4,28 @@
 namespace NightfallAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum Confidence
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Likely,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Possible,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unlikely,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VeryLikely,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VeryUnlikely,
     }

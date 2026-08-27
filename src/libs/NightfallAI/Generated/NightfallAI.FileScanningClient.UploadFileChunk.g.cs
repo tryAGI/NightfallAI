@@ -150,7 +150,7 @@ namespace NightfallAI
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
 
                 __httpRequest.Headers.TryAddWithoutValidation("X-Upload-Offset", xUploadOffset.ToString());

@@ -4,12 +4,12 @@
 namespace NightfallAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ConfidenceAdjustment
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("fixedConfidence")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::NightfallAI.JsonConverters.ConfidenceJsonConverter))]
