@@ -4,24 +4,24 @@
 namespace NightfallAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ScanFileRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("policyUUID")]
         public string? PolicyUUID { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("policy")]
         public global::NightfallAI.FileScanPolicy? Policy { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("requestMetadata")]
         public string? RequestMetadata { get; set; }

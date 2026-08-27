@@ -4,20 +4,20 @@
 namespace NightfallAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum DetectorType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NightfallDetector,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Regex,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WordList,
     }

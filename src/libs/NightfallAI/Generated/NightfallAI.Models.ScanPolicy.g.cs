@@ -34,7 +34,7 @@ namespace NightfallAI
         public global::NightfallAI.RedactionConfig? DefaultRedactionConfig { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("alertConfig")]
         public global::NightfallAI.AlertConfig? AlertConfig { get; set; }

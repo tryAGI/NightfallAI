@@ -4,12 +4,12 @@
 namespace NightfallAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class FindingMetadata
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("apiKeyMetadata")]
         public global::NightfallAI.APIKeyMetadata? ApiKeyMetadata { get; set; }

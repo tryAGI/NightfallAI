@@ -4,18 +4,18 @@
 namespace NightfallAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class DetectorMetadata
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         public string? Name { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("uuid")]
         public string? Uuid { get; set; }

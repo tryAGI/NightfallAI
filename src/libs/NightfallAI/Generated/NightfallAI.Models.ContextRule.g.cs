@@ -4,26 +4,26 @@
 namespace NightfallAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ContextRule
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("regex")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::NightfallAI.Regex Regex { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("proximity")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::NightfallAI.Proximity Proximity { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("confidenceAdjustment")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -4,16 +4,16 @@
 namespace NightfallAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum MatchType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Full,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Partial,
     }

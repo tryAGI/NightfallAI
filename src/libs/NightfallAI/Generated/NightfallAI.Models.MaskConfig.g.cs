@@ -4,7 +4,7 @@
 namespace NightfallAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class MaskConfig
     {
@@ -15,7 +15,7 @@ namespace NightfallAI
         public string? MaskingChar { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("charsToIgnore")]
         public global::System.Collections.Generic.IList<string>? CharsToIgnore { get; set; }

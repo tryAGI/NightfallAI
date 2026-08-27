@@ -4,7 +4,7 @@
 namespace NightfallAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class Detector
     {
@@ -22,7 +22,7 @@ namespace NightfallAI
         public int? MinNumFindings { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("minConfidence")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::NightfallAI.JsonConverters.ConfidenceJsonConverter))]
@@ -36,7 +36,7 @@ namespace NightfallAI
         public string? DisplayName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("detectorType")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::NightfallAI.JsonConverters.DetectorTypeJsonConverter))]
@@ -52,13 +52,13 @@ namespace NightfallAI
         public string? NightfallDetector { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("regex")]
         public global::NightfallAI.Regex? Regex { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("wordList")]
         public global::NightfallAI.WordList? WordList { get; set; }

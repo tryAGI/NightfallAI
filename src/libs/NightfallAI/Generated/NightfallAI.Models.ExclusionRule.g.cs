@@ -4,12 +4,12 @@
 namespace NightfallAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ExclusionRule
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("matchType")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::NightfallAI.JsonConverters.MatchTypeJsonConverter))]
@@ -17,7 +17,7 @@ namespace NightfallAI
         public required global::NightfallAI.MatchType MatchType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("exclusionType")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::NightfallAI.JsonConverters.ExclusionTypeJsonConverter))]
@@ -25,13 +25,13 @@ namespace NightfallAI
         public required global::NightfallAI.ExclusionType ExclusionType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("regex")]
         public global::NightfallAI.Regex? Regex { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("wordList")]
         public global::NightfallAI.WordList? WordList { get; set; }

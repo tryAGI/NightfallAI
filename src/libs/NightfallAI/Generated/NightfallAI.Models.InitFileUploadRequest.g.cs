@@ -4,12 +4,12 @@
 namespace NightfallAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class InitFileUploadRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("fileSizeBytes")]
         [global::System.Text.Json.Serialization.JsonRequired]

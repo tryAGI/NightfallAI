@@ -20,7 +20,7 @@ namespace NightfallAI.JsonConverters
                     {
                         return global::NightfallAI.LogicalOpExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

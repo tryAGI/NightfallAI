@@ -9,11 +9,11 @@ namespace NightfallAI
     public enum LogicalOp
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         All,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Any,
     }

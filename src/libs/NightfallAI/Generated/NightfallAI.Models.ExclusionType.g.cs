@@ -4,16 +4,16 @@
 namespace NightfallAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ExclusionType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Regex,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WordList,
     }

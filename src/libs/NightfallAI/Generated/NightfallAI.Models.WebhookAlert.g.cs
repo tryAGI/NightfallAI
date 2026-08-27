@@ -4,7 +4,7 @@
 namespace NightfallAI
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class WebhookAlert
     {
